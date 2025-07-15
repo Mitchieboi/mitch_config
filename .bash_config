@@ -1,0 +1,22 @@
+# Created by MitchStokes
+# To use, source */.bash_config in ~/.bashrc
+
+
+
+# Set up common aliases
+alias gits="git status"
+alias gitp="git pull"
+alias gitsw="git switch"
+alias gitb="git branch"
+alias gitpu="git push"
+alias gitpuf="git push --force"
+alias gitc="git commit"
+alias gitcm="git commit -m"
+alias gita="git add"
+alias gitaa="git add -A"
+
+# Set up terminal colors/formatting
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[92m\]\u\[\033[94m\] \[\033[94m\]\w\[\033[33m\] \$(parse_git_branch)\[\033[00m\] $ "
