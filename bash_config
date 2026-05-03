@@ -25,4 +25,4 @@ parse_git_branch() {
 export PS1="\[\033[92m\]\u\[\033[94m\] \[\033[94m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Run homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
